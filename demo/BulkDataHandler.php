@@ -39,12 +39,12 @@ class BulkDataHandler {
 
         $errorArray = [];
 
-
         //first grab the first data from the array and then do some validation
-        //we are expecting three columns at least
-        if(count($data[0]) < 3) {
+        //we are expecting three columns mappings and shouldn't be less
+        //alternatively you can check each column mappings just to be double sure
+        if(count($data[0]) < 3 || count($columnMap) < 3) {
             $this->respond(json_encode([
-              "error" => "The Data Seems not to be complete! There are " . count($data[0]) . " columns instead of 3"]), 200);
+              "error" => "The Data Seems not to be complete! " . count($columnMap) . " columns were mapped instead of 3"]), 200);
         }
 
         //this is where the data will be handled and process

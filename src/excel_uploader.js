@@ -235,8 +235,6 @@ var ExcelUploader = function(params){
     function prepareColumnMap() {
         let colMap = "{";
         let err = false;
-        // $(".smx_col-maps").removeClass("error");
-        console.log($(".error").length);
         $("body.error").css("border", "1px solid #a9a9a9");
         $("#tableError").html("");
 
@@ -245,7 +243,11 @@ var ExcelUploader = function(params){
             if(entry != "-1") {
                 let regex = new RegExp("\\b" + entry + "\\b");
                 if(colMap.search(regex) > 0) {
-                    $(this).addClass("error");
+                    $(this).css("border", "2px solid red");
+                    $(this).on("change", function () {
+                        $(this).css("border", "1px solid #a9a9a9");
+                        $("#tableError").html("");
+                    });
                     $("#tableError").html("<strong>ERROR! You have mapped more than one Data to the same type. See the row highlighted in RED</strong>");
                     alerter("ERROR! You have mapped more than one Data to the same type. See the row highlighted in RED");
                     err = true;
