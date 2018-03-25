@@ -7,7 +7,7 @@ Java excel_uploader Demo
  localhost:9000 by default.
  
  It's configured to **connect to a mysql database server running on localhost at port 3306 and that has a database named
- test**. If your local mysql does not have such database you can create it for this purpose.
+ test and a username root with password root**. If your local mysql does not have such database you can create it for this purpose.
  
  Usage
  =====
