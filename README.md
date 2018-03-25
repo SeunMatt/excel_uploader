@@ -80,8 +80,10 @@ Seun Matt - [https://smattme.com](https://smattme.com)
 
 Contributions and Support
 =========================
+**Love this library? You can support by [buying me a coffee](http://wallet.ng/pay/ossmatt)** :coffee:
+
 Wanna add a feature? or an improvement? Kindly submit a PR.
- It's advisable to involve the author from the get go. Cheers
+It's advisable to involve the author from the get go. Cheers
  
 Don't forget to star the repo and spread the word.
  
