@@ -4,10 +4,7 @@
     <title>Excel Uploader Demo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/bootstrap4.min.css">
-    <script src="./js/http_ajax.googleapis.com_ajax_libs_jquery_3.2.1_jquery.min.js"></script>
-    <script src="./js/http_cdnjs.cloudflare.com_ajax_libs_popper.js_1.12.6_umd_popper.js"></script>
-    <script src="./js/http_maxcdn.bootstrapcdn.com_bootstrap_4.0.0-beta.2_js_bootstrap.js"></script>
+    <link rel="stylesheet" href=".././css/bootstrap4.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
@@ -45,42 +42,48 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="">Import Data</h3>
+       <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="">Import Data</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <!--This is the import type selector-->
+                            <div class="form-group">
+                                <select class="form-control" id="dataType">
+                                    <option value="-1" disabled selected>Select Data to Import</option>
+                                    <option selected value="http://localhost/excel_uploader/demo/demo.php">Import Posts Data</option>
+                                </select>
                             </div>
-                            <!-- /.box-header -->
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <select class="form-control" id="dataType">
-                                                <option value="-1" disabled selected>Select Data to Import</option>
-                                                <option selected value="http://localhost/excel_uploader/demo/demo.php">Import Posts Data</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="file" id="fileUploader" class="btn btn-fill btn-primary btn-large" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tableOutput">
-                                </div>
+                            <!-- This is the file chooser input field-->
+                            <div class="form-group">
+                                <input type="file" id="fileUploader" class="btn btn-fill btn-primary btn-large" />
                             </div>
                         </div>
                     </div>
+                    <!-- This is the Blank output/progress div-->
+                    <div id="tableOutput">
+                    </div>
+                </div>
+            </div>
+       </div>
     </div>
 </div>
 
-<script src="./js/http_unpkg.com_sweetalert_dist_sweetalert.min.js"></script>
-<script src="./js/http_rawgit.com_eligrey_FileSaver.js_master_FileSaver.js"></script>
-<script src="./js/http_unpkg.com_xlsx_dist_xlsx.full.min.js"></script>
-<script type="text/javascript" src="../src/excel_uploader.js"></script>
+<script src="../js/http_ajax.googleapis.com_ajax_libs_jquery_3.2.1_jquery.min.js"></script>
+<script src="../js/http_cdnjs.cloudflare.com_ajax_libs_popper.js_1.12.6_umd_popper.js"></script>
+<script src="../js/http_maxcdn.bootstrapcdn.com_bootstrap_4.0.0-beta.2_js_bootstrap.js"></script>
+<script src="../js/http_unpkg.com_sweetalert_dist_sweetalert.min.js"></script>
+<script src="../js/http_rawgit.com_eligrey_FileSaver.js_master_FileSaver.js"></script>
+<script src="../js/http_unpkg.com_xlsx_dist_xlsx.full.min.js"></script>
+<script type="text/javascript" src="../../src/excel_uploader.js"></script>
 
 <script>
     $(document).ready( function () {
-        let e = new ExcelUploader({
+        new ExcelUploader({
             maxInAGroup: 1000,
             serverColumnNames: ["Name", "Email", "Phone Number"],
             importTypeSelector: "#dataType",

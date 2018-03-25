@@ -56,9 +56,7 @@ class BulkDataHandler {
            }
         }
 
-
         //now that we've process all the data let's return to the client
-
         $this->cleanUp();
 
         if(!empty($errorArray)) {

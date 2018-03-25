@@ -371,7 +371,7 @@ var ExcelUploader = function(params){
         $.ajax({
             url: url,
             type: "POST",
-            contentType: "application/json charset=utf-8",
+            contentType: "application/json;charset=utf-8",
             data: JSON.stringify(payload),
             dataType: "json"
         })
