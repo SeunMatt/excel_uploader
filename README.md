@@ -69,7 +69,7 @@ If there were other errors like invalid data or incomplete data. The server can 
  }
 ```
 
-Note that the response code should be 200. See the demo examples for more info.
+Note that the response code should be 200. See the demo code for more info.
 
 And that's all! Happy Bulk Data Processing.
 

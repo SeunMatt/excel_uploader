@@ -5,10 +5,11 @@ This is a PHP application that uses the excel_uploader.js for processing of larg
 
 Usage
 =====
-
-Requirements
--------------
-A mysql database server running on localhost at port 3306 with username root and password root and a database name test.
+- A mysql database server running on localhost at port 3306 with username root and password root and a database name test.
 If any of this is missing, you can simply create them.
 
-Open (demo.html)[demo.html] in your browser and follow the instructions highlighted in the main article.
+- Make sure you also have a PHP Server running
+
+- Copy the contents of *demo/php* into the public dir of your local server (e.g. www or htdocs)
+
+- Open (demo.html)[demo.html] in your browser and follow the instructions highlighted in the main article.
