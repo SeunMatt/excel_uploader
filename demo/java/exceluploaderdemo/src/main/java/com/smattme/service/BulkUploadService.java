@@ -36,7 +36,7 @@ public class BulkUploadService {
             boolean res = doUserUpload(columnMap, d);
             if(!res) {
                 //something went wrong while saving this data
-                //so it's actually save. Let's add it to error Array
+                //Let's add it to error Array
                 errorArray.add(d);
             }
         });
