@@ -11,6 +11,8 @@ Because it does the upload in batches, issues such as connection timeout is take
 data that cause an exception on the server and make them available for download as an Excel file.
 
 **Read the comprehensive [guide here](https://smattme.com/blog/technology/process-large-data-from-excel-file-with-a-breeze)**
+
+
 Usage
 =====
 Add the following to your page
