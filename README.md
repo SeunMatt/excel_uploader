@@ -10,7 +10,7 @@ Because it does the upload in batches, issues such as connection timeout is take
 
 data that cause an exception on the server and make them available for download as an Excel file.
 
-
+**Read the comprehensive [guide here](https://smattme.com/blog/technology/process-large-data-from-excel-file-with-a-breeze)**
 Usage
 =====
 Add the following to your page
@@ -85,7 +85,7 @@ Which can be interpreted as the column name is at index zero (0) of the data, em
 
 **extraData**: This is the data to be sent to the server alongside the uploaded data and column mapping. For example, CSRF token. It is an optional parameter.
 
-Read the comprehensive [guide here]().
+Read the comprehensive [guide here](https://smattme.com/blog/technology/process-large-data-from-excel-file-with-a-breeze).
 
 Server response
 ===============
